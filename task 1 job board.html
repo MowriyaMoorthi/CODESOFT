@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Board</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #007bff;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header .btn {
+      background: #fff;
+      color: #007bff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .job-cards, .job-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .job-card, .job-item {
+      background: #f4f4f4;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 300px;
+      text-align: left;
+    }
+    .job-card h3, .job-item h3 {
+      margin: 0 0 10px;
+      color: #007bff;
+    }
+    .job-card p, .job-item p {
+      margin: 0 0 10px;
+    }
+    .btn {
+      background: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Welcome to the Job Board</h1>
+      <p>Find your dream job or your next great hire!</p>
+      <a href="#job-listings" class="btn">Browse Jobs</a>
+    </div>
+  </header>
+
+  <!-- Featured Job Listings -->
+  <section id="featured-jobs" class="section">
+    <div class="container">
+      <h2>Featured Job Listings</h2>
+      <div class="job-cards">
+        <div class="job-card">
+          <h3>Frontend Developer</h3>
+          <p>Company: Tech Corp</p>
+          <p>Location: Remote</p>
+          <a href="#job-detail" class="btn">View Details</a>
+        </div>
+        <div class="job-card">
+          <h3>Data Scientist</h3>
+          <p>Company: DataPro</p>
+          <p>Location: New York</p>
+          <a href="#job-detail" class="btn">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Listings -->
+  <section id="job-listings" class="section">
+    <div class="container">
+      <h2>Job Listings</h2>
+      <div class="job-list">
+        <div class="job-item">
+          <h3>Backend Developer</h3>
+          <p>Company: WebGen</p>
+          <p>Location: San Francisco</p>
+          <a href="#job-detail" class="btn">View Details</a>
+        </div>
+        <div class="job-item">
+          <h3>Project Manager</h3>
+          <p>Company: BuildUp</p>
+          <p>Location: Chicago</p>
+          <a href="#job-detail" class="btn">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Job Board. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

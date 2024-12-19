@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Maker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+        }
+        .quiz-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .quiz-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .quiz-item:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Online Quiz Maker</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#create">Create Quiz</a>
+        <a href="#quizzes">Take Quiz</a>
+        <a href="#login">Login</a>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Welcome!</h2>
+            <p>Start creating or taking quizzes now!</p>
+        </section>
+        <section id="create">
+            <h2>Create a Quiz</h2>
+            <form id="quiz-form">
+                <label for="quiz-title">Quiz Title:</label>
+                <input type="text" id="quiz-title" name="quiz-title" required><br><br>
+                <label for="question">Question:</label>
+                <textarea id="question" name="question" required></textarea><br><br>
+                <label>Options:</label><br>
+                <input type="text" name="option1" placeholder="Option 1" required><br>
+                <input type="text" name="option2" placeholder="Option 2" required><br>
+                <input type="text" name="option3" placeholder="Option 3"><br>
+                <input type="text" name="option4" placeholder="Option 4"><br><br>
+                <label for="correct-answer">Correct Answer:</label>
+                <input type="text" id="correct-answer" name="correct-answer" required><br><br>
+                <button type="submit">Save Quiz</button>
+            </form>
+        </section>
+        <section id="quizzes">
+            <h2>Available Quizzes</h2>
+            <div class="quiz-list">
+                <div class="quiz-item">
+                    <h3>Sample Quiz 1</h3>
+                    <button onclick="takeQuiz('Sample Quiz 1')">Take Quiz</button>
+                </div>
+                <div class="quiz-item">
+                    <h3>Sample Quiz 2</h3>
+                    <button onclick="takeQuiz('Sample Quiz 2')">Take Quiz</button>
+                </div>
+            </div>
+        </section>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Online Quiz Maker. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Quiz has been saved!');
+        });
+
+        function takeQuiz(quizName) {
+            alert(`You are taking the quiz: ${quizName}`);
+        }
+
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login successful!');
+        });
+    </script>
+</body>
+</html>
